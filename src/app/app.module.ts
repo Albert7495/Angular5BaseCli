@@ -12,6 +12,7 @@ import { MatToolbarModule,
         MatListModule,
         MatIconModule,
         MatInputModule,
+        MatSelectModule, //
         MatProgressBarModule } from '@angular/material';
 
 import { APP_PROVIDERS } from './app.providers';
@@ -19,6 +20,7 @@ import { MainComponent } from './main/main.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { GitHubCardComponent } from "./git-hub-card/git-hub-card.component";
+import {SelectOverviewExample} from './simple-selector/select-overview-example'; //
 
 export const MATERIAL_COMPONENTS = [
   MatToolbarModule,
@@ -27,7 +29,8 @@ export const MATERIAL_COMPONENTS = [
   MatListModule,
   MatIconModule,
   MatInputModule,
-  MatProgressBarModule
+  MatProgressBarModule,
+  MatSelectModule//
 ]
 
 @NgModule({
@@ -36,7 +39,8 @@ export const MATERIAL_COMPONENTS = [
     MainComponent,
     AboutComponent,
     ContactComponent,
-    GitHubCardComponent
+    GitHubCardComponent,
+    SelectOverviewExample//
   ],
   imports: [
     BrowserModule,
@@ -47,7 +51,18 @@ export const MATERIAL_COMPONENTS = [
     FormsModule,
     RouterModule.forRoot(routes)
   ],
+  entryComponents: [SelectOverviewExample],//
+
   providers: [APP_PROVIDERS],
   bootstrap: [AppComponent]
 })
+
+///
+@NgModule({
+  exports: [
+    MatSelectModule
+  ]
+})
+
+//
 export class AppModule { }
