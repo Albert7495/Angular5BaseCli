@@ -20,7 +20,9 @@ import { MainComponent } from './main/main.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { GitHubCardComponent } from "./git-hub-card/git-hub-card.component";
-import {SelectOverviewExample} from './simple-selector/select-overview-example'; //
+import {SelectOverviewExample} from './simple-selector/select-overview-example';//
+import { SearchUserComponent } from './search-user/search-user.component'; 
+
 
 export const MATERIAL_COMPONENTS = [
   MatToolbarModule,
@@ -40,7 +42,8 @@ export const MATERIAL_COMPONENTS = [
     AboutComponent,
     ContactComponent,
     GitHubCardComponent,
-    SelectOverviewExample//
+    SelectOverviewExample,//
+    SearchUserComponent
   ],
   imports: [
     BrowserModule,

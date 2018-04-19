@@ -1,5 +1,11 @@
 <div class="main-container">
   <h1>Main</h1>
   <select-overview-example>loading</select-overview-example>
-   <app-git-hub-card></app-git-hub-card>
+  <br>
+  <br>
+  <app-search-user (onSearchUser)="onSearchUser($event)"></app-search-user>
+  <br>
+  <app-git-hub-card (click)="click(gitHubData)" *ngFor="let gitHubData of gitHubDataList" [github-data]="gitHubData"></app-git-hub-card>
+  <!-- <app-git-hub-card onclick="this.innerHTML=''" *ngFor="let gitHubData of gitHubDataList" [github-data]="gitHubData"></app-git-hub-card> -->
+  
 </div>
