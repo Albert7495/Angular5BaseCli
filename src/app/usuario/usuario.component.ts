@@ -11,19 +11,12 @@ import { Router } from '@angular/router';
 export class UsuarioComponent implements OnInit {
   usuario:string;
   password:string;
- 
   constructor(private _validarService: ValidarService, private router: Router) { }
 
     ngOnInit() {
-   
+  
     }
     validarUsuario(){
       this._validarService.setValida(this.usuario,this.password);
-    }
-    cambiarPage(){
-      this.router.navigate(['/']);
-    }
-    usuarioError(){
-
     }
 }

@@ -1,5 +1,9 @@
-<div>
-        <input type="text" [(ngModel)]="usuario"/>
-        <input type="text" [(ngModel)]="password"/>
+<div class="login-wrap h2"> 
+    <div class="vertical-container">
+        <input type="text" placeholder="Username" [(ngModel)]="usuario"/>
+        <input type="text" placeholder="password" [(ngModel)]="password"/>
+    </div>
+    <div class="button"> 
         <button (click)="validarUsuario()">Login</button>
+    </div>
     </div>
