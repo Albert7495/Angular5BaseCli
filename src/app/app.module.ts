@@ -19,9 +19,13 @@ import { APP_PROVIDERS } from './app.providers';
 import { MainComponent } from './main/main.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { LoginComponent } from './login/login.component';
 import { GitHubCardComponent } from "./git-hub-card/git-hub-card.component";
 import {SelectOverviewExample} from './simple-selector/select-overview-example';//
-import { SearchUserComponent } from './search-user/search-user.component'; 
+import { SearchUserComponent } from './search-user/search-user.component';
+import { PasivoComponent } from './pasivo/pasivo.component';
+import { ReactivoComponent } from './reactivo/reactivo.component'; 
+import { UsuarioComponent } from './usuario/usuario.component';
 
 
 export const MATERIAL_COMPONENTS = [
@@ -40,10 +44,14 @@ export const MATERIAL_COMPONENTS = [
     AppComponent,
     MainComponent,
     AboutComponent,
+    LoginComponent,
     ContactComponent,
     GitHubCardComponent,
     SelectOverviewExample,//
-    SearchUserComponent
+    SearchUserComponent, 
+    PasivoComponent,
+    ReactivoComponent, 
+    UsuarioComponent
   ],
   imports: [
     BrowserModule,
