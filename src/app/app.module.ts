@@ -12,6 +12,7 @@ import { MatToolbarModule,
         MatListModule,
         MatIconModule,
         MatInputModule,
+        MatSnackBarModule,
         MatSelectModule, //
         MatProgressBarModule } from '@angular/material';
 
@@ -37,6 +38,7 @@ export const MATERIAL_COMPONENTS = [
   MatIconModule,
   MatInputModule,
   MatProgressBarModule,
+  MatSnackBarModule,
   MatSelectModule//
 ]
 

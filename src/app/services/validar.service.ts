@@ -7,13 +7,10 @@ let output = document.getElementById('output');
 export class ValidarService {
 
 
-  constructor(/*private _usuarioComponent:UsuarioComponent*/private router: Router) { }
+  constructor(private router: Router) { }
 
-  setValida(usuario:string,password:string){
 
-    if(usuario=='alberto' && password=='alr'){
-      this.router.navigate(['/']);
- 
-    }
+  setValida(usuario:string,password:string):boolean{
+    return usuario=='alberto' && password=='alr';
   }
 }

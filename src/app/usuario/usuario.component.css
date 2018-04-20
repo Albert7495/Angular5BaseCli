@@ -6,25 +6,24 @@
     display: flex;
     flex-direction: column;
 }
-.data-conteiner{
-    margin: 10px
-}
-.container-space{
-    justify-content: space-between;
-}
+
 .login-wrap {
+  
     position: relative;
     margin: 0 auto;
-    background: #22afd3;
-    width: 350px;
+    background: #ecf0f1;
+     width: 350px; 
     border-radius: 5px;
     box-shadow: 3px 3px 10px rgb(20, 12, 134);
     padding: 15px;
 }
-    .h2 {
-      text-align: center;
-      font-weight: 600;
-      font-size: 2em;
-      margin-top: 10px;
-      color: #34495e;
+.h2 {
+    text-align: center;
+    /* font-weight: 600;
+    font-size: 2em;
+    margin-top: 10px; */
     }
+.item{
+    margin: 10px;
+    
+}
