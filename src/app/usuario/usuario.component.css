@@ -29,3 +29,13 @@
 .marginB{
     margin-top: 30px;
 }
+.login-wrap2 {
+  
+    position: relative;
+    margin: 0 auto;
+    background: #ecf0f1;
+    width: 450px; 
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px rgb(20, 12, 134);
+    padding: 15px;
+}
