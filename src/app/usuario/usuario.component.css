@@ -6,7 +6,6 @@
     display: flex;
     flex-direction: column;
 }
-
 .login-wrap {
   
     position: relative;
@@ -26,4 +25,7 @@
 .item{
     margin: 10px;
     
+}
+.marginB{
+    margin-top: 30px;
 }
