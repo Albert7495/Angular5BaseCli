@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ValidarService } from '../services/validar.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -10,12 +11,19 @@ import { ValidarService } from '../services/validar.service';
 export class UsuarioComponent implements OnInit {
   usuario:string;
   password:string;
-  constructor(private _validarService: ValidarService) { }
+ 
+  constructor(private _validarService: ValidarService, private router: Router) { }
 
-  ngOnInit() {
+    ngOnInit() {
    
-  }
-  validarUsuario(){
-    this._validarService.setColor(this.usuario,this.password);
-  }
+    }
+    validarUsuario(){
+      this._validarService.setValida(this.usuario,this.password);
+    }
+    cambiarPage(){
+      this.router.navigate(['/']);
+    }
+    usuarioError(){
+
+    }
 }

@@ -26,6 +26,7 @@ import { SearchUserComponent } from './search-user/search-user.component';
 import { PasivoComponent } from './pasivo/pasivo.component';
 import { ReactivoComponent } from './reactivo/reactivo.component'; 
 import { UsuarioComponent } from './usuario/usuario.component';
+//import { Router } from '@angular/router'; //
 
 
 export const MATERIAL_COMPONENTS = [
