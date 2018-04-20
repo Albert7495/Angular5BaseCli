@@ -14,6 +14,7 @@ export class PasivoComponent implements OnInit {
   ngOnInit() {
   }
   changeColor(){
+ 
     this._colorService.setColor(this.color);
   }
 }

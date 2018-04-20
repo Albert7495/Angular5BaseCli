@@ -11,8 +11,11 @@ export class ColorService {
 
   setColor(newColor:string){
     this.color.next(newColor);
+ 
   }
   getEventColor(){
+ 
     return this.color.asObservable(); //de subjectobservable a observable
+    
   }
 }
