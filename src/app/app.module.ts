@@ -14,6 +14,7 @@ import { MatToolbarModule,
         MatInputModule,
         MatSnackBarModule,
         MatSelectModule, //
+        MatTooltipModule,
         MatProgressBarModule } from '@angular/material';
 
 import { APP_PROVIDERS } from './app.providers';
@@ -39,7 +40,8 @@ export const MATERIAL_COMPONENTS = [
   MatInputModule,
   MatProgressBarModule,
   MatSnackBarModule,
-  MatSelectModule//
+  MatSelectModule,
+  MatTooltipModule//
 ]
 
 @NgModule({
