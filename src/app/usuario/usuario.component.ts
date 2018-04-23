@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ValidarService } from '../services/validar.service';
 import { Router } from '@angular/router';
+import {MatSnackBar} from '@angular/material';
 
 
 
@@ -14,17 +15,22 @@ import { Router } from '@angular/router';
 export class UsuarioComponent implements OnInit {
   usuario:string;
   password:string;
- 
-  constructor(private _validarService: ValidarService, private router: Router) { 
-    
-  }
+  hide:true;
+  constructor(private _validarService: ValidarService, private router: Router,private snackBar: MatSnackBar) { }
 
     ngOnInit() {
-   
+  
     }
+
     validarUsuario(){
       
-      this._validarService.setValida(this.usuario,this.password);
-      
+      if(this._validarService.setValida(this.usuario,this.password)){
+        this.router.navigate(['/']);
+      }else{
+        this.snackBar.open('Usuario Invalido', 'Error', { duration: 2000,});
+      }
     }
+
+      
+
 }

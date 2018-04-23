@@ -8,6 +8,7 @@ import {Component} from '@angular/core';
   templateUrl: 'select-overview-example.html',
   styleUrls: ['select-overview-example.css'],
 })
+
 export class SelectOverviewExample {
   foods = [
     {value: 'steak-0', viewValue: 'Steak'},

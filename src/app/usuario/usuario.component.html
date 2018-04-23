@@ -1,9 +1,38 @@
+<!-- <mat-tab-group class="login-wrap2 h2"> -->
+<mat-tab-group>
+        <mat-tab label="Tab 1">Content 1</mat-tab>
+        <mat-tab label="Tab 2">
 <div class="login-wrap h2"> 
     <div class="vertical-container">
-        <input type="text" placeholder="Username" [(ngModel)]="usuario"/>
-        <input type="text" placeholder="password" [(ngModel)]="password"/>
+        
+        <div>
+            <img width="75px" height="75px" src="http://cdn.onlinewebfonts.com/svg/img_311846.png" /> 
+        </div>
+
+        <mat-form-field class="example-full-width item">
+            <input matTooltip="Teclea Bien!" matTooltipPosition="before" matInput type="text" placeholder="Ingresa Usuario" [(ngModel)]="usuario"/>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matTooltip="No te equivoques!" matTooltipPosition="before" matInput placeholder="Ingresa Password" [type]="hide ? 'text' : 'password'" [(ngModel)]="password">
+            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+        </mat-form-field>
     </div>
+
     <div class="button"> 
-        <button (click)="validarUsuario()">Login</button>
+
+        <button matTooltip="Logueate!"  mat-raised-button color="primary"  (click)="validarUsuario()">Login</button>
+
+    </div>  
+            <!-- <div class="marginB">
+            <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+            </div> -->
     </div>
-    </div>
+
+
+
+      
+ </mat-tab>
+</mat-tab-group>
+
+   
