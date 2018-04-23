@@ -51,3 +51,15 @@ mat-sidenav {
 .hand-cursor {
     cursor: pointer;
 }
+.padre {
+    display: flex;
+    justify-content: right;
+    text-align: right;
+  }
+  .hijo {
+
+    width: 100px;
+    /*IMPORTANTE*/
+    /* position: absolute; */
+    top: 50%;
+    transform: translateY(-50%);}

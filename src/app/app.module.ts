@@ -5,7 +5,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms'; 
 import { MatToolbarModule,
         MatSidenavModule,
         MatButtonModule,
@@ -13,6 +13,7 @@ import { MatToolbarModule,
         MatIconModule,
         MatInputModule,
         MatSnackBarModule,
+        MatAutocompleteModule,
         MatSelectModule, //
         MatTooltipModule,
         MatTabsModule,
@@ -25,6 +26,7 @@ import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { GitHubCardComponent } from "./git-hub-card/git-hub-card.component";
 import {SelectOverviewExample} from './simple-selector/select-overview-example';//
+import { AutocompleteFilterExample } from "./autocomplete-filter/autocomplete-filter.component";
 import { SearchUserComponent } from './search-user/search-user.component';
 import { PasivoComponent } from './pasivo/pasivo.component';
 import { ReactivoComponent } from './reactivo/reactivo.component'; 
@@ -39,6 +41,7 @@ export const MATERIAL_COMPONENTS = [
   MatListModule,
   MatIconModule,
   MatInputModule,
+  MatAutocompleteModule,
   MatProgressBarModule,
   MatSnackBarModule,
   MatSelectModule,
@@ -54,6 +57,7 @@ export const MATERIAL_COMPONENTS = [
     LoginComponent,
     ContactComponent,
     GitHubCardComponent,
+    AutocompleteFilterExample,//
     SelectOverviewExample,//
     SearchUserComponent, 
     PasivoComponent,
@@ -67,20 +71,25 @@ export const MATERIAL_COMPONENTS = [
     BrowserAnimationsModule,
     MATERIAL_COMPONENTS,
     FormsModule,
+    ReactiveFormsModule,//  
     RouterModule.forRoot(routes)
   ],
-  entryComponents: [SelectOverviewExample],//
+  entryComponents: [
+    SelectOverviewExample,
+    AutocompleteFilterExample
+  ],//
 
   providers: [APP_PROVIDERS],
   bootstrap: [AppComponent]
 })
 
-///
+
 // @NgModule({
 //   exports: [
-//     MatSelectModule
+//     MatSelectModule,
+//     AutocompleteFilterExample
 //   ]
 // })
 
-//
+
 export class AppModule { }

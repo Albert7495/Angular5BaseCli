@@ -1,8 +1,12 @@
 <mat-sidenav-container>
   <mat-toolbar class="toolbar-text" color="primary">
       <mat-icon class="hand-cursor" (click)="sidenav.open()">reorder</mat-icon>
+     
       <div class="toolbar-container">
-          Angular5+ Base Material
+          <div class="hijo">
+            <autocomplete-filter-example></autocomplete-filter-example>
+        </div>
+          <!-- Angular5+ Base Material -->
           <div class="toolbar-menu-items">
               <span><a [routerLink]="['']" class="toolbar-item">Inicio</a></span>
               <span><a [routerLink]="['about']" class="toolbar-item">Nosotros</a></span>
