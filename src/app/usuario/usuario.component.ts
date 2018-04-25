@@ -13,12 +13,11 @@ export class UsuarioComponent implements OnInit {
   usuario:string;
   password:string;
   hide:true;
-  constructor(private _validarService: ValidarService, private router: Router,private snackBar: MatSnackBar) { }
+  constructor(private _validarService: ValidarService, public router: Router,private snackBar: MatSnackBar) { }
 
     ngOnInit() {
   
     }
-
     validarUsuario(){
       
       if(this._validarService.setValida(this.usuario,this.password)){

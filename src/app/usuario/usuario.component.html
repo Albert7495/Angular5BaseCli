@@ -10,11 +10,11 @@
         </div>
 
         <mat-form-field class="example-full-width item">
-            <input matTooltip="Teclea Bien!" matTooltipPosition="before" matInput type="text" placeholder="Ingresa Usuario" [(ngModel)]="usuario"/>
+            <input id="user" matTooltip="Teclea Bien!" matTooltipPosition="before" matInput type="text" placeholder="Ingresa Usuario" [(ngModel)]="usuario"/>
         </mat-form-field>
 
         <mat-form-field>
-            <input matTooltip="No te equivoques!" matTooltipPosition="before" matInput placeholder="Ingresa Password" [type]="hide ? 'text' : 'password'" [(ngModel)]="password">
+            <input id="contra" matTooltip="No te equivoques!" matTooltipPosition="before" matInput placeholder="Ingresa Password" [type]="hide ? 'text' : 'password'" [(ngModel)]="password">
             <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
         </mat-form-field>
     </div>
