@@ -13,7 +13,7 @@ export class UsuarioComponent implements OnInit {
   usuario:string;
   password:string;
   hide:true;
-  constructor(private _validarService: ValidarService, public router: Router,private snackBar: MatSnackBar) { }
+  constructor(private _validarService: ValidarService, public router: Router,public snackBar: MatSnackBar) { }
 
     ngOnInit() {
   

@@ -12,7 +12,7 @@ import { MatToolbarModule,
         MatListModule,
         MatIconModule,
         MatInputModule,
-        MatSnackBarModule,
+        MatSnackBarModule,       
         MatSelectModule, //
         MatTooltipModule,
         MatTabsModule,
@@ -40,7 +40,7 @@ export const MATERIAL_COMPONENTS = [
   MatIconModule,
   MatInputModule,
   MatProgressBarModule,
-  MatSnackBarModule,
+  MatSnackBarModule, 
   MatSelectModule,
   MatTooltipModule,
   MatTabsModule//

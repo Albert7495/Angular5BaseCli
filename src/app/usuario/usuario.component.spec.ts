@@ -17,6 +17,8 @@ import { ReactivoComponent } from '../reactivo/reactivo.component';
 import { APP_BASE_HREF } from "@angular/common";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+
+
 describe('UsuarioComponent', () => {
   let component: UsuarioComponent;
   let fixture: ComponentFixture<UsuarioComponent>;
@@ -50,39 +52,35 @@ describe('UsuarioComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
-
   it('should create', () => {
     expect(component).toBeTruthy();
   });
 
-  // it('should validate inputs',()=>{
-  //   let user=component.usuario='Alberto';
-  //   let contra=component.password='alr';
-  //   const compiled=fixture.nativeElement; 
-  
-  //   fixture.detectChanges();
-  //   expect(compiled.querySelector('#user').textContent)
-  //                   .toContain(user);
-  //   expect(compiled.querySelector('#contra').textContent)
-  //                   .toContain(contra);
-  // })
-
   it('should validate inputs', ()=>{
     component.usuario ='alberto';
     component.password='alr';
-    let navigateSpy = spyOn((<any>component).router, 'navigate');
-    component.validarUsuario()
-    expect(navigateSpy).toHaveBeenCalledWith(['/'])
-
+    let navigateSpy = spyOn((<any>component).router, 'navigate');  
+    component.validarUsuario();
+    expect(navigateSpy).toHaveBeenCalledWith(['/']);
   })
 
-  // it('should validate inputs in view', ()=>{
-  //   component.usuario ='alberto';
-  //   component.password='alr';
-  //   let navigateSpy = spyOn((<any>component).router, 'navigate');
-  //   const compiled=fixture.nativeElement; 
-  //   compiled.querySelector('button').click();
-  //   expect(navigateSpy).toHaveBeenCalledWith(['/'])
+  it('should validate inputs in view', ()=>{
+    component.usuario ='alberto';
+    component.password='alr';
+    let navigateSpy = spyOn((<any>component).router, 'navigate');
+    const compiled=fixture.nativeElement; 
+    compiled.querySelector('button').click();
+    expect(navigateSpy).toHaveBeenCalledWith(['/'])
      
-  // })
+  })
+
+  it('should validate inputs Invalid', ()=>{
+    component.usuario ='albert';
+    component.password='alr';
+    let snackRef= spyOn(component.snackBar,'open');
+  
+    component.validarUsuario();
+    expect(snackRef).toHaveBeenCalledWith('Usuario Invalido', 'Error', { duration: 2000,});
+  })
+
 });
