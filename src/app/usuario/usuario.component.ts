@@ -26,7 +26,4 @@ export class UsuarioComponent implements OnInit {
         this.snackBar.open('Usuario Invalido', 'Error', { duration: 2000,});
       }
     }
-
-      
-
 }

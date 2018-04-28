@@ -5,7 +5,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatToolbarModule,
         MatSidenavModule,
         MatButtonModule,
@@ -15,6 +15,7 @@ import { MatToolbarModule,
         MatSnackBarModule,       
         MatSelectModule, //
         MatTooltipModule,
+        MatCheckboxModule,
         MatTabsModule,
         MatProgressBarModule } from '@angular/material';
 
@@ -29,6 +30,8 @@ import { SearchUserComponent } from './search-user/search-user.component';
 import { PasivoComponent } from './pasivo/pasivo.component';
 import { ReactivoComponent } from './reactivo/reactivo.component'; 
 import { UsuarioComponent } from './usuario/usuario.component';
+import { RegisterComponent } from './register/register.component';
+import { FormFieldErrorExample } from "./form-field-error/field-error";
 //import { Router } from '@angular/router'; //
 
 
@@ -43,6 +46,7 @@ export const MATERIAL_COMPONENTS = [
   MatSnackBarModule, 
   MatSelectModule,
   MatTooltipModule,
+  MatCheckboxModule,
   MatTabsModule//
 ]
 
@@ -55,10 +59,12 @@ export const MATERIAL_COMPONENTS = [
     ContactComponent,
     GitHubCardComponent,
     SelectOverviewExample,//
+    FormFieldErrorExample,
     SearchUserComponent, 
     PasivoComponent,
     ReactivoComponent, 
-    UsuarioComponent
+    UsuarioComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -67,9 +73,10 @@ export const MATERIAL_COMPONENTS = [
     BrowserAnimationsModule,
     MATERIAL_COMPONENTS,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(routes)
   ],
-  entryComponents: [SelectOverviewExample],//
+  entryComponents: [SelectOverviewExample,FormFieldErrorExample],//
 
   providers: [APP_PROVIDERS],
   bootstrap: [AppComponent]
