@@ -18,7 +18,7 @@ import { APP_BASE_HREF } from "@angular/common";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterComponent } from '../register/register.component';
 
-
+//80
 describe('UsuarioComponent', () => {
   let component: RegisterComponent;
   let fixture: ComponentFixture<RegisterComponent>;
@@ -59,9 +59,9 @@ describe('UsuarioComponent', () => {
 
   it('should validate usuario inputs', ()=>{
     component.usuario ='alberto';    
-    console.log = jasmine.createSpy("log"); 
+    //console.log = jasmine.createSpy("log"); 
     component.setValidaUsuario();
-    expect(console.log).toHaveBeenCalledWith(['/']);
+    expect(component.response).toBe(true);
   })
 
  

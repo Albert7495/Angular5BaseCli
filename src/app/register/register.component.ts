@@ -15,6 +15,7 @@ export class RegisterComponent implements OnInit {
   rpassword:string
   nombre:string;
   hide:true;
+  response: boolean;
 
   constructor() { }
 
@@ -49,6 +50,7 @@ export class RegisterComponent implements OnInit {
       // if(isChecked){
       //   alert('checkbox esta seleccionado');
       //   }
+      this.response = true;
   }
 
   setValidaUsuario():boolean{
