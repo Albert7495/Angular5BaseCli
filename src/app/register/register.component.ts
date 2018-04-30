@@ -15,42 +15,49 @@ export class RegisterComponent implements OnInit {
   rpassword:string
   nombre:string;
   hide:true;
-  response: boolean;
-
+  hide2:true;
+  
+  user = new FormControl('', [Validators.required, Validators.minLength(4), Validators.maxLength(15)]);
   constructor() { }
 
   ngOnInit() {
   }
+  getErrorMessageUser() {
+    return this.user.hasError('required') ? 'Campo Requerido' :
+        this.user.hasError('minLength') ? 'Minimo 4 caracteres' :
+        this.user.hasError('maxLength') ? 'Maximo 15 caracteres' :
+            '';
 
+  }
   validarRegistro(){
-    let flag=true; 
+  
     /*   * */
       if(!this.setValidaUsuario()){
         console.log("Debe tener entre 5 y 15 caracteres");
-        flag=false;
+        
       }
       /*   * */
       if(this.setValidaPasswoord()==0){
         console.log("Debe tener  1 Mayuscula");
-        flag=false;
+   
       }
 
    /** */
       if(this.setValidaRpasswoord()){
-     console.log("no coincide");
-     flag=false;
+          console.log("no coincide");
+
        }
       /** */
       if(this.setValidaNombre()!=0){
         console.log("no numeros");
-        flag=false;
+
           }
 
       // var isChecked = document.getElementById('check1').checked;
       // if(isChecked){
       //   alert('checkbox esta seleccionado');
       //   }
-      this.response = true;
+      
   }
 
   setValidaUsuario():boolean{

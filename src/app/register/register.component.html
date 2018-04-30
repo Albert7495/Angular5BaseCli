@@ -7,7 +7,8 @@
             
         <!-- usuario -->
         <mat-form-field class="example-full-width item">
-            <input id="user" matTooltip="Teclea Bien!" matTooltipPosition="before" matInput type="text" placeholder="Ingresa Usuario" [(ngModel)]="usuario"/>
+            <input id="user" matTooltip="Teclea Bien!" matTooltipPosition="before" matInput type="text" placeholder="Ingresa Usuario" [(ngModel)]="usuario"  [formControl]="user" required/>
+            <mat-error *ngIf="user.invalid">{{getErrorMessageUser()}}</mat-error>
         </mat-form-field>
             
         <!-- password -->
@@ -18,8 +19,8 @@
            
         <!-- repit pasword -->
         <mat-form-field>
-            <input id="rcontra" matTooltip="No te equivoques!" matTooltipPosition="before" matInput placeholder="Repite Password" [type]="hide ? 'text' : 'rpassword'" [(ngModel)]="rpassword">
-            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+            <input id="rcontra" matTooltip="No te equivoques!" matTooltipPosition="before" matInput placeholder ="Repite Password" [type]="hide2 ? 'text' : 'rpassword'" [(ngModel)]="rpassword">
+            <mat-icon matSuffix (click)="hide2 = !hide">{{hide2 ? 'visibility' : 'visibility_off'}}</mat-icon>
         </mat-form-field>
        
         <!-- correo -->
