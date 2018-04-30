@@ -2,6 +2,8 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { APP_PROVIDERS } from '../app.providers';
 import { ReactivoComponent } from './reactivo.component';
 
+
+
 describe('ReactivoComponent', () => {
   let component: ReactivoComponent;
   let fixture: ComponentFixture<ReactivoComponent>;

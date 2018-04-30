@@ -13,8 +13,11 @@
             
         <!-- password -->
         <mat-form-field>
-            <input id="contra" matTooltip="No te equivoques!" matTooltipPosition="before" matInput placeholder="Ingresa Password" [type]="hide ? 'text' : 'password'" [(ngModel)]="password">
+            <input id="contra" matTooltip="No te equivoques!" matTooltipPosition="before" matInput placeholder="Ingresa Password" [type]="hide ? 'text' : 'password'" [(ngModel)]="password"  [formControl]="pass" required>
+            <mat-error *ngIf="pass.invalid">{{getErrorMessagePass()}}</mat-error>
             <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+
+           
         </mat-form-field>
            
         <!-- repit pasword -->
@@ -29,18 +32,18 @@
          </div>
         <!-- nombre -->
         <mat-form-field class="example-full-width item">
-            <input id="nombre" matTooltip="Teclea Bien!" matTooltipPosition="before" matInput type="text" placeholder="Nombre" [(ngModel)]="nombre"/>
+            <input id="nombre" matTooltip="Teclea Bien!" matTooltipPosition="before" matInput type="text" placeholder="Nombre" [(ngModel)]="nombre"  [formControl]="user" required/>
+            <mat-error *ngIf="user.invalid">{{getErrorMessageUser()}}</mat-error>
         </mat-form-field>
         
         <!-- checkbox -->
-        <input type="checkbox" name="check[]" id="check1" value="1"/>
-        <!-- <mat-checkbox>Check me!</mat-checkbox> -->
+        <!-- <input type="checkbox" name="check[]" id="check1" value="1"/> -->
+        <mat-checkbox>Check me!</mat-checkbox>
+
     </div>
 
     <div class="button"> 
         <button matTooltip="Logueate!"  mat-raised-button color="primary"  (click)="validarRegistro()">Login</button>
     </div>  
-            <!-- <div class="marginB">
-            <mat-progress-bar mode="indeterminate"></mat-progress-bar>
-            </div> -->
+       
     </div>

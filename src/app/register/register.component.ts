@@ -18,6 +18,8 @@ export class RegisterComponent implements OnInit {
   hide2:true;
   
   user = new FormControl('', [Validators.required, Validators.minLength(4), Validators.maxLength(15)]);
+  pass = new FormControl('', [Validators.required]);
+
   constructor() { }
 
   ngOnInit() {
@@ -29,6 +31,12 @@ export class RegisterComponent implements OnInit {
             '';
 
   }
+
+  getErrorMessagePass() {
+    return this.pass.hasError('required') ? 'Campo Requerido' :'';
+  }
+ 
+
   validarRegistro(){
   
     /*   * */

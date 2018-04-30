@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { APP_PROVIDERS } from '../app.providers';
 import { LoginComponent } from '../login/login.component';
 import { UsuarioComponent } from '../usuario/usuario.component';
@@ -17,9 +17,10 @@ import { ReactivoComponent } from '../reactivo/reactivo.component';
 import { APP_BASE_HREF } from "@angular/common";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterComponent } from '../register/register.component';
+import { FormFieldErrorExample } from "../form-field-error/field-error";
 
 //80
-describe('UsuarioComponent', () => {
+describe('RegistroComponent', () => {
   let component: RegisterComponent;
   let fixture: ComponentFixture<RegisterComponent>;
 
@@ -32,13 +33,14 @@ describe('UsuarioComponent', () => {
          RegisterComponent,        
         AboutComponent,
         ContactComponent,
+        FormFieldErrorExample,
         SelectOverviewExample,
         SearchUserComponent,
         GitHubCardComponent,
         ReactivoComponent,
         PasivoComponent
       ],
-      imports: [FormsModule,
+      imports: [FormsModule,ReactiveFormsModule,
         MATERIAL_COMPONENTS,
         RouterModule.forRoot(routes),
         BrowserAnimationsModule
@@ -57,12 +59,12 @@ describe('UsuarioComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should validate usuario inputs', ()=>{
-    component.usuario ='alberto';    
-    //console.log = jasmine.createSpy("log"); 
-    component.setValidaUsuario();
-    expect(component.response).toBe(true);
-  })
+  // it('should validate usuario inputs', ()=>{
+  //   component.usuario ='alberto';    
+  //   //console.log = jasmine.createSpy("log"); 
+  //   component.setValidaUsuario();
+  //   expect(component.response).toBe(true);
+  // })
 
  
 

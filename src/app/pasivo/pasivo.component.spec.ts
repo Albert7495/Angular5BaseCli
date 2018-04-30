@@ -1,7 +1,12 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { APP_PROVIDERS } from '../app.providers';
 import { PasivoComponent } from './pasivo.component';
+import { RegisterComponent } from '../register/register.component';
+import { FormFieldErrorExample } from "../form-field-error/field-error";
+import { MATERIAL_COMPONENTS } from "../app.module";
+
+
 
 describe('PasivoComponent', () => {
   let component: PasivoComponent;
@@ -9,8 +14,12 @@ describe('PasivoComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PasivoComponent ],
-      imports: [FormsModule],
+      declarations: [
+        PasivoComponent,
+        RegisterComponent,
+        FormFieldErrorExample 
+      ],
+      imports: [MATERIAL_COMPONENTS,FormsModule,ReactiveFormsModule],
       providers: [APP_PROVIDERS]
     })
     .compileComponents();

@@ -11,8 +11,8 @@ export class FormFieldErrorExample {
   email = new FormControl('', [Validators.required, Validators.email]);
 
   getErrorMessage() {
-    return this.email.hasError('required') ? 'You must enter a value' :
-        this.email.hasError('email') ? 'Not a valid email' :
+    return this.email.hasError('required') ? 'Campo Requerido' :
+        this.email.hasError('email') ? 'Email No Valido' :
             '';
 
   }

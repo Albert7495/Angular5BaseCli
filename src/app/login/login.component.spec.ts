@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { APP_PROVIDERS } from '../app.providers';
 import { LoginComponent } from './login.component';
 import { UsuarioComponent } from '../usuario/usuario.component';
@@ -16,8 +16,11 @@ import { PasivoComponent } from '../pasivo/pasivo.component';
 import { ReactivoComponent } from '../reactivo/reactivo.component'; 
 import { APP_BASE_HREF } from "@angular/common";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RegisterComponent } from '../register/register.component';
+import { FormFieldErrorExample } from "../form-field-error/field-error";
 
-describe('PasivoComponent', () => {
+
+describe('LoginComponent', () => {
   let component: LoginComponent;
   let fixture: ComponentFixture<LoginComponent>;
 
@@ -26,7 +29,9 @@ describe('PasivoComponent', () => {
       declarations: [ 
         LoginComponent,
         UsuarioComponent,
+        RegisterComponent,
         MainComponent,
+        FormFieldErrorExample,
         AboutComponent,
         ContactComponent,
         SelectOverviewExample,
@@ -36,6 +41,7 @@ describe('PasivoComponent', () => {
         PasivoComponent
       ],
       imports: [FormsModule,
+        ReactiveFormsModule,
         MATERIAL_COMPONENTS,
         RouterModule.forRoot(routes),
         BrowserAnimationsModule
